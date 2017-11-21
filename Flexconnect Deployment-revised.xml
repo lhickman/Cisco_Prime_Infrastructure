@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><ootb-template>
+    <template-metadata name="Flexconnect Deployment">
+        <template-details>
+            <description/>
+            <author>lewis</author>
+            <tag-list/><tag-list/>
+        </template-details>
+        <parameter-metadata>
+            <param-group cliName="cli command set" isMandatory="true" name="Flexconnect Deployment parameters">
+                <description>Parameters for Flexconnect Deployment</description>
+                <parameter name="flexname">
+                    <description>Flexconnect Group Name</description>
+                    <default-value label=""/>
+                    <data-type>String</data-type>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="apMACList">
+                    <description>List of AP MAC addresses (comma separated)</description>
+                    <default-value label="List of AP MACs that will be added to the Flexconnect group"/>
+                    <data-type>String</data-type>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+            </param-group>
+        </parameter-metadata>
+    </template-metadata>
+    <config>
+        <device-filtering-details>
+            <family value="Wireless Controller">
+                <min-supported-imageversion value=""/>
+            </family>
+        </device-filtering-details>
+        <cli name="cli command set">
+            <clicommand>config flexconnect group $flexname add
+
+#set ($apMACs=$apMACList.split(","))
+
+#foreach ($apMAC in $apMACs)
+  config flexconnect group $flexname ap add $apMAC
+#end
+
+config flexconnect group $flexname vlan enable 
+config flexconnect group $flexname vlan native 600 
+config flexconnect group $flexname policy acl add WIRELESS-PRENAC 
+config flexconnect group $flexname policy acl add WIRELESS-NAC-PASSED
+
+config wlan apgroup add $flexname
+config wlan apgroup nasid SSA-FLEX-WLAN-01 $flexname
+config wlan apgroup interface-mapping add $flexname 1 management
+
+
+
+
+
+</clicommand>
+        </cli>
+    </config>
+</ootb-template>
