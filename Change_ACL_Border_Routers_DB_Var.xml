@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><ootb-template>
+    <template-metadata name="Change_ACL_Border_Routers">
+        <template-details>
+            <description>Changes the ACL on all Internet facing interfaces</description>
+            <author>lewis</author>
+            <tag-list/><tag-list/>
+        </template-details>
+        <parameter-metadata>
+            <param-group cliName="cli command set" isMandatory="true" name="Change_ACL_Border_Routers parameters">
+                <description>Parameters for Change_ACL_Border_Routers</description>
+                <parameter name="DeviceName">
+                    <description>DB Variable-do not change this Field</description>
+                    <default-value label="">DeviceName</default-value>
+                    <data-type>DB</data-type>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern>DeviceName</pattern>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="ACLNAME">
+                    <description>ACL name</description>
+                    <default-value label="Name of ACL to be applied to interface"/>
+                    <data-type>String</data-type>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+            </param-group>
+        </parameter-metadata>
+    </template-metadata>
+    <config>
+        <device-filtering-details>
+            <family value="Routers">
+                <min-supported-imageversion value=""/>
+            </family>
+        </device-filtering-details>
+        <cli name="cli command set">
+            <clicommand>#if($DeviceName  eq "2921-Router.amer.cisco.com")
+interface gi 0/2
+ ip access-group $ACLNAME in
+#end
+#if($DeviceName  eq "Condo-2811.comcast.net")
+interface fa 0/0.25
+ ip access-group $ACLNAME in
+#end
+#if($DeviceName  eq "Test-2921-Router.amer.cisco.com")
+interface gi 0/1
+ ip access-group $ACLNAME in
+#end
+
+
+</clicommand>
+        </cli>
+    </config>
+</ootb-template>
