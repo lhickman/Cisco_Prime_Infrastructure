@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?><ootb-template>
+    <template-metadata name="Official Configure SNMPv3">
+        <template-details>
+            <description>Official Configure SNMPv3</description>
+            <author>root</author>
+            <tag-list/><tag-list/>
+        </template-details>
+        <parameter-metadata>
+            <param-group cliName="cli command set" isMandatory="true" name="Configure SNMPv3 parameters">
+                <description>Official Configure SNMPv3</description>
+                <parameter heading="SNMPv3 Group" name="snmpv3group">
+                    <description>SNMPv3 Group Name</description>
+                    <default-value label="Name of the SNMPv3 group"/>
+                    <data-type>String</data-type>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="SecLevel">
+                    <description>Security Level for SNMPv3 Group</description>
+                    <default-value label="SNMP Version 3 security levels">authPriv</default-value>
+                    <default-value>authNoPriv</default-value>
+                    <default-value>noAuthNoPriv</default-value>
+                    <data-type>Dropdown</data-type>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="typev3">
+                    <description>Type (Select Read or Write)</description>
+                    <default-value label="Specify a read or write view for the group">write</default-value>
+                    <default-value> read</default-value>
+                    <data-type>Dropdown</data-type>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="useMIBview">
+                    <description>use MIB view</description>
+                    <default-value label="Choose Confgure view name for read or write">false</default-value>
+                    <data-type>Checkbox</data-type>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="MIBview">
+                    <description>MIB View to use on SNMPv3 Group</description>
+                    <default-value label="If Use MIB View is selected. Enter read or write view name. "/>
+                    <data-type>String</data-type>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="useACL">
+                    <description>Use an ACL for access control</description>
+                    <default-value label="Choose to configure access-list">false</default-value>
+                    <data-type>Checkbox</data-type>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="ACL" separator="true">
+                    <description>ACL name or Std ACL number (1-99)</description>
+                    <default-value label="If Use an ACL for access control is selected. Specify an access-list associated with this group"/>
+                    <data-type>String</data-type>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter heading="SNMPv3 User" name="snmpv3user">
+                    <description>Username for SNMPv3</description>
+                    <default-value label="Username for SNMPv3"/>
+                    <data-type>String</data-type>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="authhash">
+                    <description>Authentication algorithm Hash (MD5 or SHA)</description>
+                    <default-value label="Algorithm for authentication">MD5</default-value>
+                    <default-value>SHA</default-value>
+                    <data-type>Dropdown</data-type>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="userpwd">
+                    <description>SNMPv3 users password (Password displayed in clear text)</description>
+                    <default-value label="password for SNMPv3 user. Please have passwords of length 8 characters or more."/>
+                    <data-type>String</data-type>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="encryp">
+                    <description>Encryption Algorithm for SNMPv3 Privacy</description>
+                    <default-value label="Algorithm for encryption">DES</default-value>
+                    <default-value>3DES</default-value>
+                    <default-value>AES128</default-value>
+                    <default-value>AES192</default-value>
+                    <default-value>AES256</default-value>
+                    <data-type>Dropdown</data-type>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="privpasswd">
+                    <description>Password for SNMPv3 Privacy Algorithm (displayed in clear text)</description>
+                    <default-value label="password for SNMPv3 privacy algorithm. Please have passwords of length 8 characters or more."/>
+                    <data-type>String</data-type>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+            </param-group>
+        </parameter-metadata>
+    </template-metadata>
+    <config platform="">
+        <device-filtering-details>
+            <family value="Routers">
+                <min-supported-imageversion value=""/>
+            </family>
+            <family value="Switches and Hubs">
+                <min-supported-imageversion value=""/>
+            </family>
+            <family value="Wireless Controller/Cisco 5760 Series Wireless LAN Controller">
+                <min-supported-imageversion value=""/>
+            </family>
+        </device-filtering-details>
+        <cli name="cli command set">
+            <clicommand>#if(${SecLevel} == "authPriv")
+	#set($SecLevel = "priv")
+#elseif(${SecLevel} == "authNoPriv")
+	#set($SecLevel = "auth")
+#else
+	#set($SecLevel = "noauth")
+#end
+#if (${useMIBview} == "true" and ${useACL} == "true")
+	snmp-server group $snmpv3group v3 $SecLevel $typev3 $MIBview access $ACL
+ #elseif (${useMIBview} == "true" and ${useACL} == "FALSE")
+	snmp-server group $snmpv3group v3 $SecLevel $typev3 $MIBview 
+ #elseif (${useMIBview} == "FALSE" and ${useACL} == "true")
+	snmp-server group $snmpv3group v3 $SecLevel $typev3 v1default access $ACL
+ #else 
+	snmp-server group $snmpv3group v3 $SecLevel $typev3 v1default
+#end
+
+#if( ${userpwd} !="" and ${privpasswd}=="" )
+    snmp-server user $snmpv3user $snmpv3group v3 auth $authhash $userpwd 
+#elseif( ${userpwd} !="" and ${privpasswd}!="")
+	#if ( ${encryp} eq "DES" ) 
+	  snmp-server user $snmpv3user $snmpv3group v3 auth $authhash $userpwd priv DES $privpasswd
+	#elseif (${encryp} eq "3DES" )
+	  snmp-server user $snmpv3user $snmpv3group v3 auth $authhash $userpwd priv 3DES $privpasswd
+	#elseif (${encryp} eq "AES128" )
+	  snmp-server user $snmpv3user $snmpv3group v3 auth $authhash $userpwd priv AES 128 $privpasswd
+	#elseif (${encryp} eq "AES192" )
+	  snmp-server user $snmpv3user $snmpv3group v3 auth $authhash $userpwd priv AES 192 $privpasswd
+	#elseif (${encryp} eq "AES256" )
+	  snmp-server user $snmpv3user $snmpv3group v3 auth $authhash $userpwd priv AES 256 $privpasswd
+	#end
+#end
+
+</clicommand>
+        </cli>
+    </config>
+</ootb-template>

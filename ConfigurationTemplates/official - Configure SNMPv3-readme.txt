@@ -1,0 +1,1 @@
+Prime Infrastructure 3.1 did not include an SNMPv3 deployment template.  This is a template I wrote that got integrated into Prime Infrastructure 3.2 and beyond, so if you are running PI 3.1 and need SNMPv3 template for deployement, feel free to use this one.
