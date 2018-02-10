@@ -1,0 +1,80 @@
+<CustomPolicy xmlns="http://www.cisco.com/nccm/api/schemas/1.1" id="_ASA_Uptime_Check31_3_2017_1_2_31_944">
+    <Title><![CDATA[ASA-Uptime-Check]]></Title>
+    <Description><![CDATA[This policy checks the up time of an ASA and compares it with the 213 days which is the threshold for triggering an ASA Hang (CSCvd78303)]]></Description>
+    
+    <CreatedOn><![CDATA[1490936552098]]></CreatedOn>
+    <ModifiedOn><![CDATA[1490936575231]]></ModifiedOn>
+    <CreatedUser><![CDATA[admin]]></CreatedUser>
+    <PolicyType><![CDATA[WIZARD]]></PolicyType>
+    <Categories>
+       <Category id="_CCM_USER_DEFINED" type="category">CCM_USER_DEFINED</Category>
+    </Categories>
+    <VersionSelectorRefs>
+      <VersionSelectorRef><![CDATA[pix_only]]></VersionSelectorRef>
+      <VersionSelectorRef><![CDATA[cisco]]></VersionSelectorRef>
+    </VersionSelectorRefs>
+    <References>
+      <Reference identifier="Custom">
+        <Source>Custom</Source>
+        <Sections>Custom Sections</Sections>
+        <Versions>Custom Versions</Versions>
+      </Reference>
+    </References>
+    <Rules>
+      <Rule identifier="_Check_ASA_Uptime_special_30_3_2017_23_3_45">
+        <Title><![CDATA[Check-ASA-Uptime-special]]></Title>
+        <Description><![CDATA[This policy checks for the version of ASA software that has the Cisco bug ID CSCva03607 fix in it and also checks the up time of the susceptible ASA and compares it with the 213 days which is the threshold for triggering an ASA Hang (CSCvd78303). If the ASA has been up for 200 days or longer it will raise a critical Violation.]]></Description>
+        <Impact><![CDATA[If ASA is running ASA software that has the Cisco bug ID CSCva03607 fix in it, the Device will hang and require a physical reboot, unless remotely rebooted prior to the 213 day mark.]]></Impact>
+        <SuggestedFix><![CDATA[Please reboot ASA very soon]]></SuggestedFix>
+        <VersionSelectorRefs>
+          <VersionSelectorRef>pix_only</VersionSelectorRef>
+          <VersionSelectorRef>cisco</VersionSelectorRef>
+        </VersionSelectorRefs>
+         <RuleType>RAW_CONFIG</RuleType>
+        <Conditions>
+          <Condition>
+            <Type>RAW_CONFIG</Type>
+            <DisplayString><![CDATA[Output of show version | grep Software Version must match the expression (9.1\(7.8\)|9.2\(4.15\)|9.4\(3.5\)|9.4\(4\)|9.5\(3\)|9.6\(2.1\)|9.6\(3\)|9.7\(1\))]]></DisplayString>
+            <MatchAction>CONTINUE</MatchAction>
+            <NonMatchAction>DONT_RAISE_RETURN</NonMatchAction>
+            <BlockParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </BlockParams>
+            <RegexpParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </RegexpParams>
+            <Severity>3</Severity>
+             <DatasetName><![CDATA[show version | grep Software Version]]></DatasetName>
+            <Scope>DATASET</Scope>
+            <Operator>MATCHES_EXPRESSION</Operator>
+            <Value><![CDATA[(9.1\(7.8\)|9.2\(4.15\)|9.4\(3.5\)|9.4\(4\)|9.5\(3\)|9.6\(2.1\)|9.6\(3\)|9.7\(1\))]]></Value>
+          </Condition>
+          <Condition>
+            <Type>RAW_CONFIG</Type>
+            <DisplayString><![CDATA[Output of show version | grep days must match the expression (20[0-9]|21[0-3])]]></DisplayString>
+            <MatchAction>RAISE_RETURN</MatchAction>
+            <NonMatchAction>DONT_RAISE_RETURN</NonMatchAction>
+            <BlockParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </BlockParams>
+            <RegexpParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </RegexpParams>
+            <Severity>1</Severity>
+            <ViolationMessage><![CDATA[Reboot ASAP-ASA has been running for more then 200 days, please reboot before 213 day Hang Threshold]]></ViolationMessage>
+          <Violation>
+            <Message><![CDATA[Reboot ASAP-ASA has been running for more then 200 days, please reboot before 213 day Hang Threshold]]></Message>
+            </Violation>
+             <DatasetName><![CDATA[show version | grep days]]></DatasetName>
+            <Scope>DATASET</Scope>
+            <Operator>MATCHES_EXPRESSION</Operator>
+            <Value><![CDATA[(20[0-9]|21[0-3])]]></Value>
+          </Condition>
+        </Conditions>
+      </Rule>
+    </Rules>
+</CustomPolicy>
