@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><ootb-template>
+    <template-metadata name="Change_ACL_Border_Rtr_Portbased">
+        <template-details>
+            <description/>
+            <author>lewis</author>
+            <tag-list>
+                <tag>Ports</tag>
+            </tag-list><tag-list><tag>Ports</tag></tag-list>
+        </template-details>
+        <parameter-metadata>
+            <param-group cliName="cli command set" isMandatory="true" name="Change_ACL_Border_Rtr_Portbased parameters">
+                <description>Parameters for Change_ACL_Border_Rtr_Portbased</description>
+                <parameter name="ACLNAME">
+                    <description>ACL name</description>
+                    <default-value label="Name of ACL to be applied to interface"/>
+                    <data-type>String</data-type>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+            </param-group>
+        </parameter-metadata>
+    </template-metadata>
+    <config>
+        <device-filtering-details>
+            <family value="Routers">
+                <min-supported-imageversion value=""/>
+            </family>
+        </device-filtering-details>
+        <cli name="cli command set">
+            <clicommand> ip access-group $ACLNAME in
+
+
+
+
+
+</clicommand>
+        </cli>
+    </config>
+</ootb-template>
