@@ -1,0 +1,67 @@
+<CustomPolicy xmlns="http://www.cisco.com/nccm/api/schemas/1.1" id="_Check_OSPF_PID18_1_2018_15_45_47_61">
+    <Title><![CDATA[Check OSPF PID]]></Title>
+    <Description><![CDATA[Check for specific OSPF PID in configuration]]></Description>
+    
+    <CreatedOn><![CDATA[1516308347248]]></CreatedOn>
+    <ModifiedOn><![CDATA[1516309152226]]></ModifiedOn>
+    <CreatedUser><![CDATA[admin]]></CreatedUser>
+    <PolicyType><![CDATA[WIZARD]]></PolicyType>
+    <Categories>
+       <Category id="_CCM_USER_DEFINED" type="category">CCM_USER_DEFINED</Category>
+    </Categories>
+    <VersionSelectorRefs>
+      <VersionSelectorRef><![CDATA[iosxe]]></VersionSelectorRef>
+      <VersionSelectorRef><![CDATA[ios]]></VersionSelectorRef>
+    </VersionSelectorRefs>
+    <References>
+      <Reference identifier="Custom">
+        <Source>Custom</Source>
+        <Sections>Custom Sections</Sections>
+        <Versions>Custom Versions</Versions>
+      </Reference>
+    </References>
+    <Rules>
+      <Rule identifier="_Check_OSPF_PID_18_1_2018_15_44_57">
+        <Title><![CDATA[Check OSPF PID]]></Title>
+        <VersionSelectorRefs>
+          <VersionSelectorRef>iosxe</VersionSelectorRef>
+          <VersionSelectorRef>ios</VersionSelectorRef>
+        </VersionSelectorRefs>
+         <RuleType>RAW_CONFIG</RuleType>
+        <Inputs>
+          <Input identifier="_Destination">
+            <Title>ProcessID</Title>
+            <DataType>Integer</DataType>
+            <Scalar>true</Scalar>
+            <Required>true</Required>
+            <Scope>Execution</Scope>
+            <CustomConstraint>&lt;Access&gt;&lt;AccessMode&gt;ReadWrite&lt;/AccessMode&gt;&lt;Key&gt;false&lt;/Key&gt;&lt;Required&gt;true&lt;/Required&gt;&lt;/Access&gt;&lt;Value&gt;&lt;MinInclusive&gt;1&lt;/MinInclusive&gt;&lt;MaxInclusive&gt;65535&lt;/MaxInclusive&gt;&lt;Description&gt;Process ID of OSPF Process that you are looking for&lt;/Description&gt;&lt;InputScope&gt;Execution&lt;/InputScope&gt;&lt;IsLOV&gt;false&lt;/IsLOV&gt;&lt;/Value&gt;</CustomConstraint>
+          </Input>
+        </Inputs>
+        <Conditions>
+          <Condition>
+            <Type>RAW_CONFIG</Type>
+            <DisplayString><![CDATA[Configuration must match the expression (router ospf <_Destination>\b)]]></DisplayString>
+            <MatchAction>DONT_RAISE_RETURN</MatchAction>
+            <NonMatchAction>RAISE_RETURN</NonMatchAction>
+            <BlockParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </BlockParams>
+            <RegexpParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </RegexpParams>
+            <Severity>3</Severity>
+            <ViolationMessage><![CDATA[Device is not running OSPF with Proccess ID <_Destination>]]></ViolationMessage>
+          <Violation>
+            <Message><![CDATA[Device is not running OSPF with Proccess ID <_Destination>]]></Message>
+            </Violation>
+            <Scope>ALL_CONFIG</Scope>
+            <Operator>MATCHES_EXPRESSION</Operator>
+            <Value><![CDATA[(router ospf <_Destination>\b)]]></Value>
+          </Condition>
+        </Conditions>
+      </Rule>
+    </Rules>
+</CustomPolicy>
