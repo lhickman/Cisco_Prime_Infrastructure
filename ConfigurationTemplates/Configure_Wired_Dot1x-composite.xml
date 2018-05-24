@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><com.cisco.ifm.template.importExport.ExportContainer>
+  <confContainer class="com.cisco.ifm.config.model.CompositeTemplate">
+    <instanceUuid>ffb6ac41-9194-4c36-8071-4343e747fa40</instanceUuid>
+    <instanceId>136417299</instanceId>
+    <authEntityId>136417299</authEntityId>
+    <authEntityClass>707276031</authEntityClass>
+    <__orderedListOEIndex>0</__orderedListOEIndex>
+    <__creationOrderIndex>0</__creationOrderIndex>
+    <__isBeingChanged>false</__isBeingChanged>
+    <deployPending>NONE</deployPending>
+    <instanceVersion>0</instanceVersion>
+    <author>root</author>
+    <creationTime class="sql-timestamp">2018-05-23 14:18:10.13</creationTime>
+    <deviceType class="dynamic-proxy">Switches and Hubs</deviceType>
+    <displayName>Configure_Wired_Dot1x</displayName>
+    <hasMandatoryFields>false</hasMandatoryFields>
+    <isAllowedInCompTemplate>true</isAllowedInCompTemplate>
+    <modificationTime class="sql-timestamp">2018-05-23 14:27:37.134</modificationTime>
+    <name>Configure_Wired_Dot1x</name>
+    <numberOfRuns>0</numberOfRuns>
+    <parentId>-1112</parentId>
+    <type>COMPOSITE</type>
+    <Tags class="org.hibernate.collection.PersistentSet">
+      <initialized>false</initialized>
+      <owner class="com.cisco.ifm.config.model.CompositeTemplate" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>com.cisco.ifm.config.model.ConfigContainer.Tags</role>
+      <key class="long">136417299</key>
+      <dirty>false</dirty>
+    </Tags>
+    <configGroupMNEMapping class="org.hibernate.collection.PersistentSet">
+      <initialized>false</initialized>
+      <owner class="com.cisco.ifm.config.model.CompositeTemplate" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>com.cisco.ifm.config.model.ConfigContainer.configGroupMNEMapping</role>
+      <key class="long">136417299</key>
+      <dirty>false</dirty>
+    </configGroupMNEMapping>
+    <memberOrder class="org.hibernate.collection.PersistentSet">
+      <initialized>true</initialized>
+      <owner class="com.cisco.ifm.config.model.CompositeTemplate" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>com.cisco.ifm.config.model.CompositeTemplate.memberOrder</role>
+      <key class="long">136417299</key>
+      <dirty>false</dirty>
+      <storedSnapshot class="map">
+        <entry>
+          <string>136417300</string>
+          <string>136417300</string>
+        </entry>
+        <entry>
+          <string>136417297</string>
+          <string>136417297</string>
+        </entry>
+      </storedSnapshot>
+      <set class="linked-hash-set">
+        <string>136417297</string>
+        <string>136417300</string>
+      </set>
+    </memberOrder>
+    <members class="org.hibernate.collection.PersistentSet">
+      <initialized>true</initialized>
+      <owner class="com.cisco.ifm.config.model.CompositeTemplate" reference="../.."/>
+      <cachedSize>-1</cachedSize>
+      <role>com.cisco.ifm.config.model.CompositeTemplate.members</role>
+      <key class="long">136417299</key>
+      <dirty>false</dirty>
+      <storedSnapshot class="map">
+        <entry>
+          <com.cisco.ifm.config.model.CompositeTemplateMember>
+            <instanceUuid>d607bd06-6459-4e98-b29c-acf184d4d05f</instanceUuid>
+            <instanceId>136432303</instanceId>
+            <authEntityId>136432303</authEntityId>
+            <authEntityClass>-487929737</authEntityClass>
+            <__orderedListOEIndex>0</__orderedListOEIndex>
+            <__creationOrderIndex>0</__creationOrderIndex>
+            <__isBeingChanged>false</__isBeingChanged>
+            <deployPending>NONE</deployPending>
+            <instanceVersion>0</instanceVersion>
+            <memberID>136417300</memberID>
+            <memberType>CONFIGCONTAINER</memberType>
+          </com.cisco.ifm.config.model.CompositeTemplateMember>
+          <com.cisco.ifm.config.model.CompositeTemplateMember reference="../com.cisco.ifm.config.model.CompositeTemplateMember"/>
+        </entry>
+        <entry>
+          <com.cisco.ifm.config.model.CompositeTemplateMember>
+            <instanceUuid>98d20763-82ae-4dcc-97c1-438173d0956c</instanceUuid>
+            <instanceId>136432302</instanceId>
+            <authEntityId>136432302</authEntityId>
+            <authEntityClass>-487929737</authEntityClass>
+            <__orderedListOEIndex>0</__orderedListOEIndex>
+            <__creationOrderIndex>0</__creationOrderIndex>
+            <__isBeingChanged>false</__isBeingChanged>
+            <deployPending>NONE</deployPending>
+            <instanceVersion>0</instanceVersion>
+            <memberID>136417297</memberID>
+            <memberType>CONFIGCONTAINER</memberType>
+          </com.cisco.ifm.config.model.CompositeTemplateMember>
+          <com.cisco.ifm.config.model.CompositeTemplateMember reference="../com.cisco.ifm.config.model.CompositeTemplateMember"/>
+        </entry>
+      </storedSnapshot>
+      <set>
+        <com.cisco.ifm.config.model.CompositeTemplateMember reference="../../storedSnapshot/entry/com.cisco.ifm.config.model.CompositeTemplateMember"/>
+        <com.cisco.ifm.config.model.CompositeTemplateMember reference="../../storedSnapshot/entry[2]/com.cisco.ifm.config.model.CompositeTemplateMember"/>
+      </set>
+    </members>
+  </confContainer>
+  <listContainers>
+    <com.cisco.ifm.template.importExport.ExportContainer>
+      <confContainer>
+        <instanceUuid>b70ff89f-8a2c-4159-8146-88c82c846eb9</instanceUuid>
+        <instanceId>136417297</instanceId>
+        <authEntityId>136417297</authEntityId>
+        <authEntityClass>-796815109</authEntityClass>
+        <__orderedListOEIndex>0</__orderedListOEIndex>
+        <__creationOrderIndex>0</__creationOrderIndex>
+        <__isBeingChanged>false</__isBeingChanged>
+        <deployPending>NONE</deployPending>
+        <instanceVersion>0</instanceVersion>
+        <author>root</author>
+        <contentID>138119995</contentID>
+        <creationTime class="sql-timestamp">2018-05-23 13:49:40.09</creationTime>
+        <deviceType class="dynamic-proxy">Switches and Hubs</deviceType>
+        <displayName>Enable_8021x_Globally</displayName>
+        <hasMandatoryFields>false</hasMandatoryFields>
+        <isAllowedInCompTemplate>true</isAllowedInCompTemplate>
+        <modificationTime class="sql-timestamp">2018-05-23 14:08:48.731</modificationTime>
+        <name>Enable_8021x_Globally</name>
+        <numberOfRuns>0</numberOfRuns>
+        <parentId>-1111</parentId>
+        <type>CLI</type>
+        <Tags class="org.hibernate.collection.PersistentSet">
+          <initialized>true</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.Tags</role>
+          <key class="long">136417297</key>
+          <dirty>false</dirty>
+          <storedSnapshot class="map"/>
+          <set/>
+        </Tags>
+        <configGroupMNEMapping class="org.hibernate.collection.PersistentSet">
+          <initialized>false</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.configGroupMNEMapping</role>
+          <key class="long">136417297</key>
+          <dirty>false</dirty>
+        </configGroupMNEMapping>
+      </confContainer>
+      <cliTemplate>
+        <templateMetadata>
+          <templateDetails>
+            <description></description>
+            <author>root</author>
+            <tagList/>
+          </templateDetails>
+          <parameterMetadata>
+            <paramGroup>
+              <com.cisco.ifm.template.lmsextn.ParamGroup>
+                <description>Parameters for Enable_8021x_Globally</description>
+                <parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Enable MAC Move</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Select the Mac Move check box to allow a host to move to a different port in the same switch, even if an authenticated session exists in the current port.</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Checkbox</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>mac_move</name>
+                    <isGlobalVariable>false</isGlobalVariable>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Enable Device for MAC Change Notifications</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>MAC address notification enables you to track users on a network by storing the MAC address activity on the switch. Whenever the switch learns or removes a MAC address, an SNMP notification can be generated and sent. Note:  You will need to Select Notify MAC addition/remove on the individual port configuration template. Select Notify MAC addition check box to enable the MAC address notification whenever a MAC address is added to an interface. Select Notify MAC removals check box to enable the MAC address notification whenever a MAC address is removed from an interface.</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Checkbox</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>mac_change</name>
+                    <isGlobalVariable>false</isGlobalVariable>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                </parameter>
+                <name>Enable_8021x_Globally parameters</name>
+                <cliName>cli command set</cliName>
+                <isMandatory>true</isMandatory>
+              </com.cisco.ifm.template.lmsextn.ParamGroup>
+            </paramGroup>
+          </parameterMetadata>
+          <name>Enable_8021x_Globally</name>
+        </templateMetadata>
+        <config>
+          <com.cisco.ifm.template.lmsextn.Config>
+            <deviceFilteringDetails>
+              <family>
+                <com.cisco.ifm.template.lmsextn.Family>
+                  <minSupportedImageversion>
+                    <value></value>
+                  </minSupportedImageversion>
+                  <value>Switches and Hubs</value>
+                </com.cisco.ifm.template.lmsextn.Family>
+              </family>
+            </deviceFilteringDetails>
+            <cli>
+              <com.cisco.ifm.template.lmsextn.CliType>
+                <clicommand>
+                  <string>dot1x system-auth-control 
+#if ($mac_move == &quot;true&quot;)
+     authentication mac-move permit
+#end
+#if ($mac_change == &quot;true&quot;)
+     snmp-server enable traps mac-notification change
+#end</string>
+                </clicommand>
+                <name>cli command set</name>
+              </com.cisco.ifm.template.lmsextn.CliType>
+            </cli>
+          </com.cisco.ifm.template.lmsextn.Config>
+        </config>
+      </cliTemplate>
+    </com.cisco.ifm.template.importExport.ExportContainer>
+    <com.cisco.ifm.template.importExport.ExportContainer>
+      <confContainer>
+        <instanceUuid>df9bfece-8f28-4e3b-997f-105488d1ba2a</instanceUuid>
+        <instanceId>136417300</instanceId>
+        <authEntityId>136417300</authEntityId>
+        <authEntityClass>-796815109</authEntityClass>
+        <__orderedListOEIndex>0</__orderedListOEIndex>
+        <__creationOrderIndex>0</__creationOrderIndex>
+        <__isBeingChanged>false</__isBeingChanged>
+        <deployPending>NONE</deployPending>
+        <instanceVersion>0</instanceVersion>
+        <author>root</author>
+        <contentID>138119996</contentID>
+        <creationTime class="sql-timestamp">2018-05-23 14:25:26.89</creationTime>
+        <deviceType class="dynamic-proxy">Switches and Hubs</deviceType>
+        <displayName>Wired_Dot1x_IOS_XE</displayName>
+        <hasMandatoryFields>false</hasMandatoryFields>
+        <isAllowedInCompTemplate>true</isAllowedInCompTemplate>
+        <name>Wired_Dot1x_IOS_XE</name>
+        <numberOfRuns>0</numberOfRuns>
+        <parentId>-1111</parentId>
+        <type>CLI</type>
+        <Tags class="org.hibernate.collection.PersistentSet">
+          <initialized>true</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.Tags</role>
+          <key class="long">136417300</key>
+          <dirty>false</dirty>
+          <storedSnapshot class="map">
+            <entry>
+              <com.cisco.ifm.config.model.ConfigTag>
+                <instanceUuid>6300a0b1-17cc-484f-b755-e64994fd29a0</instanceUuid>
+                <instanceId>582642</instanceId>
+                <authEntityId>582642</authEntityId>
+                <authEntityClass>-1065308720</authEntityClass>
+                <__orderedListOEIndex>0</__orderedListOEIndex>
+                <__creationOrderIndex>0</__creationOrderIndex>
+                <__isBeingChanged>false</__isBeingChanged>
+                <deployPending>NONE</deployPending>
+                <instanceVersion>0</instanceVersion>
+                <name>Ports</name>
+                <configInstances class="org.hibernate.collection.PersistentSet">
+                  <initialized>false</initialized>
+                  <owner class="com.cisco.ifm.config.model.ConfigTag" reference="../.."/>
+                  <cachedSize>-1</cachedSize>
+                  <role>com.cisco.ifm.config.model.ConfigTag.configInstances</role>
+                  <key class="long">582642</key>
+                  <dirty>false</dirty>
+                </configInstances>
+              </com.cisco.ifm.config.model.ConfigTag>
+              <com.cisco.ifm.config.model.ConfigTag reference="../com.cisco.ifm.config.model.ConfigTag"/>
+            </entry>
+          </storedSnapshot>
+          <set>
+            <com.cisco.ifm.config.model.ConfigTag reference="../../storedSnapshot/entry/com.cisco.ifm.config.model.ConfigTag"/>
+          </set>
+        </Tags>
+        <configGroupMNEMapping class="org.hibernate.collection.PersistentSet">
+          <initialized>false</initialized>
+          <owner class="com.cisco.ifm.config.model.ConfigContainer" reference="../.."/>
+          <cachedSize>-1</cachedSize>
+          <role>com.cisco.ifm.config.model.ConfigContainer.configGroupMNEMapping</role>
+          <key class="long">136417300</key>
+          <dirty>false</dirty>
+        </configGroupMNEMapping>
+      </confContainer>
+      <cliTemplate>
+        <templateMetadata>
+          <templateDetails>
+            <description></description>
+            <author>root</author>
+            <tagList>
+              <tag>
+                <string>Ports</string>
+              </tag>
+            </tagList>
+          </templateDetails>
+          <parameterMetadata>
+            <paramGroup>
+              <com.cisco.ifm.template.lmsextn.ParamGroup>
+                <description>Parameters for Wired_Dot1x_IOS_XE</description>
+                <parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Security Mode to be Configured</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Monitor</value>
+                        <label>Monitor or Closed</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Closed</value>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Dropdown</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>id_mode</name>
+                    <separator>true</separator>
+                    <heading>Identity Mode</heading>
+                    <isGlobalVariable>false</isGlobalVariable>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Authentication Profile</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>802.1x</value>
+                        <label>The Authentication Profile selects the method of authentication to be used. Multi-method profiles provide a fallback order, if the first method fails, the second method will take over.  The different types of authentication profiles available in 802.1x are:   *802.1x Port-Based Authentication  *MAC Authentication Bypass (MAB)  *Web-Based Authentication (WebAuth)  *Local WebAuth</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>802.1x then MAB</value>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>MAB</value>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Dropdown</dataType>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>auth_prof</name>
+                    <heading>Authentication Profile and Host Mode</heading>
+                    <isGlobalVariable>false</isGlobalVariable>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Host Mode</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Single Host</value>
+                        <label>The host mode determines the number of hosts that can be authenticated on a given port.  Single Host mode: Allows only one user to authenticate per port.  Multiple host mode: Allows multiple hosts to authenticate on the same port in a single domain. For example, multiple users can get connected to the switch through a hub; however,only one of the hosts will be authorized for all hosts on this port to be granted access to the network.  Multiauth host mode: Allows only one client in the voice VLAN and multiple authenticated clients in the data VLAN. This provides enhanced security over multiple hosts mode by requiring authentication of each connected client.  Multi-domain authentication mode: Allows an IP Phone (Cisco or non-Cisco) and a PC to authenticate on the same switch port while it places them on appropriate voice and data VLANs.</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Multi Host</value>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Multiauth</value>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>MultiDomain</value>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>No Change </value>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Dropdown</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>host_mode</name>
+                    <isGlobalVariable>false</isGlobalVariable>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Action to be taken on Security Violation</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Restrict</value>
+                        <label>Security voilation refers to : *An unauthorized device connects to a port if traffic with a secure MAC address that is configured on one secure port attempts to access another secure port in the same VLAN.  *Besides the maximum number of secure MAC addresses being added to the address table and if the port receives traffic from a MAC address that is not in the address table.   Restrict Mode: When the number of secure MAC addresses reaches the maximum limit allowed on the port, packets from any new device that sends traffic to the port are dropped. When this security violation occurs, a syslog message is logged.  Protect Mode: When the number of secure MAC addresses reaches the maximum limit allowed on the port, packets from any new device that sends traffic to the port are dropped. When this security violation occurs, you are not notified.   Shutdown Mode: The port become error-disabled and shuts down immediately.</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Protect</value>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>Shutdown</value>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value>No Change</value>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Dropdown</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>sec_action</name>
+                    <separator>true</separator>
+                    <isGlobalVariable>false</isGlobalVariable>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Enable MAC Replace</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Select MAC Replace check box to allow one host to replace a previously authenticated host on the same port. MAC Replace is a corrective action for the security violation that is triggered when one host replaces another authenticated host. MAC Replace takes precedence over other actions like Restrict, Protect, Shutdown, that might be configured in this page.</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Checkbox</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>mac_replace</name>
+                    <heading>MAC Configuration</heading>
+                    <isGlobalVariable>false</isGlobalVariable>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Notify MAC Addition</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Select Notify MAC addition check box to enable the MAC address notification whenever a MAC address is added to an interface.</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Checkbox</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>notify_mac_add</name>
+                    <isGlobalVariable>false</isGlobalVariable>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Notify MAC Removal</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>Select Notify MAC removals check box to enable the MAC address notification whenever a MAC address is removed from an interface.</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Checkbox</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>notify_mac_rem</name>
+                    <separator>true</separator>
+                    <isGlobalVariable>false</isGlobalVariable>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Access VLAN</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>This field appears only when you select the closed mode. Access VLAN: After a successful authentication, the client connecting to the port will be placed in this VLAN.</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Integer</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>1</min>
+                      <max>4094</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>access_vlan</name>
+                    <heading>VLAN Configuration</heading>
+                    <isGlobalVariable>false</isGlobalVariable>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Voice VLAN</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>This field appears only when you select the closed mode. Voice VLAN: After a successful authentication, the client IP phone connecting to the port will be placed in this voice VLAN.</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Integer</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>1</min>
+                      <max>4094</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>voice_vlan</name>
+                    <isGlobalVariable>false</isGlobalVariable>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Auth-fail VLAN</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>This field appears only when you select the closed mode. Auth Fail VLAN: After a failed authentication, this VLAN will be applied to the port, and it is configured to grant limited access based on the type of failed authentication method.</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Integer</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>1</min>
+                      <max>4094</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>auth_fail_vlan</name>
+                    <isGlobalVariable>false</isGlobalVariable>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                  <com.cisco.ifm.template.lmsextn.Parameter>
+                    <description>Critical VLAN</description>
+                    <defaultValue>
+                      <com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                        <value></value>
+                        <label>This field appears only when you select the closed mode. Critical VLAN: The port will be moved to the critical VLAN when switch determines that the AAA server has failed during an IEEE 802.1x or MAB authentication.</label>
+                      </com.cisco.ifm.template.lmsextn.Parameter_-DefaultValue>
+                    </defaultValue>
+                    <dataType>Integer</dataType>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                      <min>1</min>
+                      <max>4094</max>
+                      <pattern></pattern>
+                    </syntax>
+                    <name>critical_vlan</name>
+                    <isGlobalVariable>false</isGlobalVariable>
+                  </com.cisco.ifm.template.lmsextn.Parameter>
+                </parameter>
+                <name>Wired_Dot1x_IOS_XE parameters</name>
+                <cliName>cli command set</cliName>
+                <isMandatory>true</isMandatory>
+              </com.cisco.ifm.template.lmsextn.ParamGroup>
+            </paramGroup>
+          </parameterMetadata>
+          <name>Wired_Dot1x_IOS_XE</name>
+        </templateMetadata>
+        <config>
+          <com.cisco.ifm.template.lmsextn.Config>
+            <deviceFilteringDetails>
+              <family>
+                <com.cisco.ifm.template.lmsextn.Family>
+                  <minSupportedImageversion>
+                    <value></value>
+                  </minSupportedImageversion>
+                  <value>Switches and Hubs</value>
+                </com.cisco.ifm.template.lmsextn.Family>
+              </family>
+            </deviceFilteringDetails>
+            <cli>
+              <com.cisco.ifm.template.lmsextn.CliType>
+                <clicommand>
+                  <string>switchport mode access
+!
+!
+!
+#if($id_mode == &quot;Monitor&quot;)
+         authentication open
+#else
+         no authentication open
+#end
+!
+authentication port-control auto
+no ip access-group in
+!
+!
+!
+#if($auth_prof == &quot;802.1x&quot;)
+       authentication order dot1x
+       dot1x pae authenticator
+       no mab
+       no authentication fallback
+#end
+#if($auth_prof == &quot;MAB&quot;)
+       authentication order mab
+        mab
+        no dot1x pae
+        no authentication fallback
+#end
+#if($auth_prof == &quot;802.1x then MAB&quot;)
+      authentication order dot1x mab
+      dot1x pae authenticator
+      mab
+      no authentication fallback
+#end
+!
+!
+!
+#if($id_mode == &quot;Closed&quot;)
+	#if($host_mode == &quot;Single Host&quot;)
+	  authentication host-mode single-host
+	#elseif ($host_mode == &quot;Multi Host&quot;)
+	  authentication host-mode multi-host
+	#elseif ($host_mode == &quot;Multiauth&quot;)
+	  authentication host-mode multi-auth
+	#elseif ($host_mode == &quot;MultiDomain&quot;)
+	  authentication host-mode multi-domain
+	#end
+#elseif ($id_mode == &quot;Monitor&quot;)
+	  authentication host-mode multi-auth
+#end
+!
+!
+!
+#if ($mac_replace == &quot;true&quot;)
+     authentication violation replace
+#elseif($sec_action == &quot;Restrict&quot;)
+	  authentication violation restrict	
+	#elseif ($sec_action == &quot;Protect&quot;)
+	  authentication violation protect	
+	#elseif ($sec_action == &quot;Shutdown&quot;)
+	  authentication violation shutdown
+#end
+!
+!
+!
+#if($notify_mac_add == &quot;true&quot;)
+	  snmp trap mac-notification change added	
+#else
+	  no snmp trap mac-notification change added	
+#end
+#if($notify_mac_rem == &quot;true&quot;)
+	  snmp trap mac-notification change removed	
+#else
+	  no snmp trap mac-notification change removed	
+#end
+!
+!
+!
+#if( ${access_vlan} !=&quot;&quot; &amp;&amp; $id_mode == &quot;Closed&quot;)
+     switchport access vlan $access_vlan
+#end
+#if( ${voice_vlan} !=&quot;&quot; &amp;&amp; $id_mode == &quot;Closed&quot;)
+     switchport voice vlan $voice_vlan
+#end
+#if( ${auth_fail_vlan} !=&quot;&quot; &amp;&amp; $id_mode == &quot;Closed&quot;)
+     authentication event fail action authorize vlan $auth_fail_vlan
+#end
+#if( ${critical_vlan} !=&quot;&quot; &amp;&amp; $id_mode == &quot;Closed&quot;)
+     authentication event server dead action authorize vlan $critical_vlan
+#end
+</string>
+                </clicommand>
+                <name>cli command set</name>
+              </com.cisco.ifm.template.lmsextn.CliType>
+            </cli>
+            <platform>undefined</platform>
+          </com.cisco.ifm.template.lmsextn.Config>
+        </config>
+      </cliTemplate>
+    </com.cisco.ifm.template.importExport.ExportContainer>
+  </listContainers>
+</com.cisco.ifm.template.importExport.ExportContainer>
