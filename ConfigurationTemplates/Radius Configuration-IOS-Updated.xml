@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="UTF-8"?><ootb-template>
+    <template-metadata name="Radius Configuration-IOS-Updated">
+        <template-details>
+            <description/>
+            <author>lewis</author>
+            <tag-list/><tag-list/>
+        </template-details>
+        <parameter-metadata>
+            <param-group cliName="cli command set" isMandatory="true" name="Radius Configuration-IOS-Updated parameters">
+                <description>Parameters for Radius Configuration-IOS-Updated</description>
+                <parameter name="radious_group_name">
+                    <description>Radius Group Name[Enter Only if you want to configure for radius group] </description>
+                    <default-value label=""/>
+                    <data-type>String</data-type>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="shared_key">
+                    <description>Shared Key  </description>
+                    <default-value label=""/>
+                    <data-type>String</data-type>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="servername_ip1">
+                    <description>Server name or IP Address for Radius Group/Host  </description>
+                    <default-value label=""/>
+                    <data-type>String</data-type>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="authentication_port1">
+                    <description>Authentication Port </description>
+                    <default-value label="">1812</default-value>
+                    <data-type>String</data-type>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="accounting_port1">
+                    <description>Accounting Port </description>
+                    <default-value label="">1813</default-value>
+                    <data-type>String</data-type>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="servername_ip2">
+                    <description>Server name or IP Address for Radius Group Only  </description>
+                    <default-value label=""/>
+                    <data-type>String</data-type>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="authentication_port2">
+                    <description>Authentication Port </description>
+                    <default-value label="">1812</default-value>
+                    <data-type>String</data-type>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="accounting_port2">
+                    <description>Accounting Port </description>
+                    <default-value label="">1813</default-value>
+                    <data-type>String</data-type>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="servername_ip3">
+                    <description>Server name or IP Address for Radius Group Only  </description>
+                    <default-value label=""/>
+                    <data-type>String</data-type>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="authentication_port3">
+                    <description>Authentication Port </description>
+                    <default-value label="">1812</default-value>
+                    <data-type>String</data-type>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="accounting_port3">
+                    <description>Accounting Port </description>
+                    <default-value label="">1813</default-value>
+                    <data-type>String</data-type>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="servername_ip4">
+                    <description>Server name or IP Address for Radius Group Only  </description>
+                    <default-value label=""/>
+                    <data-type>String</data-type>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="authentication_port4">
+                    <description>Authentication Port </description>
+                    <default-value label="">1812</default-value>
+                    <data-type>String</data-type>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="accounting_port4">
+                    <description>Accounting Port </description>
+                    <default-value label="">1813</default-value>
+                    <data-type>String</data-type>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="servername_ip5">
+                    <description>Server name or IP Address for Radius Group Only  </description>
+                    <default-value label=""/>
+                    <data-type>String</data-type>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="authentication_port5">
+                    <description>Authentication Port </description>
+                    <default-value label="">1812</default-value>
+                    <data-type>String</data-type>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="accounting_port5">
+                    <description>Accounting Port </description>
+                    <default-value label="">1813</default-value>
+                    <data-type>String</data-type>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="MAB_AAA">
+                    <description>Enable for 802.1X / MAB AAA </description>
+                    <default-value label="Enable,Disable">Enable</default-value>
+                    <default-value>Disable</default-value>
+                    <data-type>Dropdown</data-type>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="AAAforWebAuthentication">
+                    <description>Enable AAA for Web Authentication </description>
+                    <default-value label="Enable,Disable">Enable</default-value>
+                    <default-value>Disable</default-value>
+                    <data-type>Dropdown</data-type>
+                    <mandatory>false</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="family_value">
+                    <description>Device Types</description>
+                    <default-value label="Do not change the default value. &amp;amp;amp;amp;amp;amp;amp;amp;quot;ProductSeries&amp;amp;amp;amp;amp;amp;amp;amp;quot;">ProductSeries</default-value>
+                    <data-type>DB</data-type>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="sys_oid">
+                    <description>Device OID</description>
+                    <default-value label="Do not change the default value. &amp;amp;amp;amp;amp;amp;amp;amp;quot;SysObjectID&amp;amp;amp;amp;amp;amp;amp;amp;quot;">SysObjectID</default-value>
+                    <data-type>DB</data-type>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+                <parameter name="imageVersion">
+                    <description>OS Version</description>
+                    <default-value label="Do not change the default value. &amp;amp;amp;amp;amp;amp;amp;amp;quot;ImageVersion&amp;amp;amp;amp;amp;amp;amp;amp;quot;">ImageVersion</default-value>
+                    <data-type>DB</data-type>
+                    <mandatory>true</mandatory>
+                    <isGlobal>false</isGlobal>
+                    <syntax>
+                        <pattern/>
+                    </syntax>
+                    <isGlobalVariable>false</isGlobalVariable>
+                </parameter>
+            </param-group>
+        </parameter-metadata>
+    </template-metadata>
+    <config>
+        <device-filtering-details>
+            <family value="Routers,Switches and Hubs/Cisco Catalyst Blade Switch 3000 Series,Switches and Hubs/Cisco 1220 Etherswitch Series,Switches and Hubs/Cisco Catalyst 6800 Series Switches,Switches and Hubs/Cisco FastHub Series Hubs,Switches and Hubs/Cisco Catalyst 4900 Series Switches,Switches and Hubs/Cisco FastHub 100 Series Hubs,Switches and Hubs/Cisco Catalyst 6500 Series Switches,Switches and Hubs/Cisco Catalyst 4500-X Series Switches,Switches and Hubs/Cisco IE 2000 Series Switches,Switches and Hubs/Cisco Catalyst 8500 Series Multiservice Switch Routers,Switches and Hubs/Cisco Catalyst 4200 Series Switches,Switches and Hubs/Cisco IE 3000 Series Switches,Switches and Hubs/Cisco Catalyst 6000 Series Switches,Switches and Hubs/Cisco Catalyst 5500 Series Switches,Switches and Hubs/Cisco IE 3010 Series Switches,Switches and Hubs/Cisco Catalyst G-L3 Series Switches,Switches and Hubs/Cisco FastHub 200 Series Hubs,Switches and Hubs/Cisco IGX 8400 Series Switches,Switches and Hubs/Cisco Catalyst 5000 Series Switches,Switches and Hubs/Cisco Catalyst 8500 Series Campus Switch Routers,Switches and Hubs/Cisco Catalyst 9300 Series Switches,Switches and Hubs/Cisco Catalyst 4500 Series Switches,Switches and Hubs/Cisco Industrial Ethernet 2000U Series Switches,Switches and Hubs/Cisco 1538 Series Micro Hubs,Switches and Hubs/Cisco 1548 Series Micro Switch,Switches and Hubs/Cisco 1500 Series Micro Hubs,Switches and Hubs/Cisco 2500 Series Connected Grid Switches,Switches and Hubs/Cisco 8110 Series Broadband Network Termination Units,Switches and Hubs/Cisco BPX 8600 Series Switches,Switches and Hubs/Cisco Catalyst 1200 Series Switches,Switches and Hubs/Cisco Lightstream ATM Switches,Switches and Hubs/Cisco Catalyst 1600 Series Switches,Switches and Hubs/Cisco Catalyst 4000 Series Switches,Switches and Hubs/Cisco ME 2400 Series Ethernet Access Switches,Switches and Hubs/Cisco Catalyst 1900 Series Switches,Switches and Hubs/Cisco Catalyst 2100 Series Switches,Switches and Hubs/Cisco ME 3400 Series Ethernet Access Switches,Switches and Hubs/Cisco Catalyst 3900 Series Switches,Switches and Hubs/Cisco Catalyst 2350 Series Switches,Switches and Hubs/Cisco Catalyst 2360 Series Switches,Switches and Hubs/Cisco Catalyst 2800 Series Switches,Switches and Hubs/Cisco Catalyst 2900 Series Switches,Switches and Hubs/Cisco Catalyst 2900 Series XL Switches,Switches and Hubs/Cisco ME 3400E Series Ethernet Access Switches,Switches and Hubs/Cisco Catalyst 2918 Series Switches,Switches and Hubs/Cisco Catalyst 2928 Series Switches,Switches and Hubs/Cisco Catalyst 2940 Series Switches,Switches and Hubs/Cisco ME 3600X Series Ethernet Access Switches,Switches and Hubs/Cisco Catalyst 2950 Series Switches,Switches and Hubs/Cisco Catalyst 2960 Series Switches,Switches and Hubs/Cisco Catalyst 2960-C Series Switches,Switches and Hubs/Cisco Catalyst 2960-Plus Series Switches,Switches and Hubs/Cisco ME 3800X Series Carrier Ethernet Switch Routers,Switches and Hubs/Cisco Catalyst 2960-SF Series Switches,Switches and Hubs/Cisco ME 4900 Series Ethernet Switches,Switches and Hubs/Cisco Catalyst 2960-X Series Switches,Switches and Hubs/Cisco ME 6500 Series Ethernet Switches,Switches and Hubs/Cisco Catalyst 3850 Series Ethernet Stackable Switch,Switches and Hubs/Rockwell Stratix 8000 Series Switches,Switches and Hubs/Cisco MGX 8200 Series Edge Concentrators,Switches and Hubs/Cisco Catalyst 2960-XR Series Switches,Switches and Hubs/Rockwell Stratix 5700 Series Switches,Switches and Hubs/Other Switches and Hubs,Switches and Hubs/Cisco Workgroup Concentrators,Switches and Hubs/Cisco MGX 8800 Series Switches,Switches and Hubs/Cisco Catalyst 2970 Series Switches,Switches and Hubs/Cisco Catalyst 2975 Series Switches,Switches and Hubs/Cisco Catalyst 3750-X Series Switches,Switches and Hubs/Cisco MGX 8900 Series Switches,Switches and Hubs/Cisco Catalyst 3000 Series Switches,Switches and Hubs/Cisco MS200X Series Ethernet Access Switch,Switches and Hubs/Cisco Catalyst 3500 Series XL Switches,Switches and Hubs/Cisco Catalyst 3550 Series Switches,Switches and Hubs/Cisco Small Business 500 Series Stackable Managed Switches ,Switches and Hubs/Cisco Pro Series,Switches and Hubs/Cisco Catalyst 3750-E Series Switches,Switches and Hubs/Cisco FastHub 300 Series Hubs,Switches and Hubs/Cisco Catalyst 3560 Series Switches,Switches and Hubs/Cisco Catalyst 3560-C Series Switches,Switches and Hubs/Cisco Small Business 300 Series Managed Switches,Switches and Hubs/Cisco Catalyst 3560-E Series Switches,Switches and Hubs/Cisco Catalyst 3560-X Series Switches,Switches and Hubs/Cisco Small Business 220 Series Smart Plus Switches,Switches and Hubs/Cisco Catalyst 3650 Series Switches,Switches and Hubs/Cisco Catalyst 3750 Metro Series Switches,Switches and Hubs/Cisco Catalyst 3750 Series Switches">
+                <min-supported-imageversion value=""/>
+            </family>
+        </device-filtering-details>
+        <cli name="cli command set">
+            <clicommand>#if( ($family_value =="Cisco Catalyst 36xx stack-able ethernet switch" || $family_value=="Cisco Catalyst 3650 Series Switches" || $family_value=="Cisco Catalyst 3850 Series Ethernet Stackable Switch" || $family_value=="Cisco Catalyst38xx stack-able ethernet switch" || $family_value=="Cisco Catalyst 9300 Series Switches") && ($sys_oid=="1.3.6.1.4.1.9.1.1641" || $sys_oid=="1.3.6.1.4.1.9.1.1642" || $sys_oid=="1.3.6.1.4.1.9.1.1643" || $sys_oid=="1.3.6.1.4.1.9.1.1644" || $sys_oid=="1.3.6.1.4.1.9.1.1879" || $sys_oid=="1.3.6.1.4.1.9.1.1880" || $sys_oid=="1.3.6.1.4.1.9.1.1767" || $sys_oid=="1.3.6.1.4.1.9.1.1768" || $sys_oid=="1.3.6.1.4.1.9.1.1745" || $sys_oid=="1.3.6.1.4.1.9.1.2165" || $sys_oid=="1.3.6.1.4.1.9.1.2166" || $sys_oid=="1.3.6.1.4.1.9.1.1823" || $sys_oid=="1.3.6.1.4.1.9.1.1824" || $sys_oid=="1.3.6.1.4.1.9.1.1825" || $sys_oid=="1.3.6.1.4.1.9.1.1826" || $sys_oid=="1.3.6.1.4.1.9.1.1827" || $sys_oid=="1.3.6.1.4.1.9.1.1828" || $sys_oid=="1.3.6.1.4.1.9.1.1829" || $sys_oid=="1.3.6.1.4.1.9.1.1830" || $sys_oid=="1.3.6.1.4.1.9.1.1831" || $sys_oid=="1.3.6.1.4.1.9.1.1881" || $sys_oid=="1.3.6.1.4.1.9.1.1882" || $sys_oid=="1.3.6.1.4.1.9.1.2066" || $sys_oid=="1.3.6.1.4.1.9.1.1745" || $sys_oid=="1.3.6.1.4.1.9.1.2494"))
+#set($dotIndex=$imageVersion.indexOf("."))
+#set($osVersion=0)
+#set($versionCheck="false")
+#if($dotIndex != -1)
+    #set ( $osVersion = $osVersion.parseInt($imageVersion.substring(0,$dotIndex)))
+#end
+#if($osVersion  >= 16 || $osVersion == 3)
+#set($versionCheck="true")
+#end
+#if($versionCheck=="true")
+#if(${radious_group_name} == "")
+	aaa new-model
+	aaa session-id common
+
+	aaa server radius dynamic-author
+	client ${servername_ip1} server-key ${shared_key}
+	auth-type any
+	exit
+	radius-server attribute 6 on-for-login-auth
+	radius-server attribute 8 include-in-access-req
+	radius-server attribute 25 access-request include
+	radius-server attribute 31 send nas-port-detail
+	radius-server dead-criteria time 10 tries 5
+	#if(${MAB_AAA} eq "Enable")
+		aaa authentication dot1x default group radius
+		aaa authorization network default group radius
+		aaa authorization configuration default group radius
+		aaa accounting dot1x default start-stop group radius
+	#end
+	#if(${AAAforWebAuthentication} eq "Enable")
+		aaa authentication login default group radius
+		aaa authorization auth-proxy default group radius
+		aaa accounting auth-proxy default start-stop group radius
+	#end	
+	radius-server vsa send accounting
+	radius-server vsa send authentication
+
+#else
+		aaa new-model
+		aaa session-id common
+
+		aaa server radius dynamic-author
+		client ${servername_ip1} server-key ${shared_key}
+		auth-type any
+		exit
+
+		radius server ${radious_group_name}		
+		#if(${servername_ip1} != "" and ${authentication_port1} !="" and ${accounting_port1} != "")
+			address ipv4 ${servername_ip1} auth-port ${authentication_port1} acct-port ${accounting_port1}
+			pac key ${shared_key}
+
+		#end
+		#if(${servername_ip2} != "" and ${authentication_port2} !="" and ${accounting_port2} != "")
+			address ipv4 ${servername_ip2} auth-port ${authentication_port2} acct-port ${accounting_port2}
+			pac key ${shared_key}
+		#end
+		#if(${servername_ip3} != "" and ${authentication_port3} !="" and ${accounting_port3} != "")
+			address ipv4 ${servername_ip3} auth-port ${authentication_port3} acct-port ${accounting_port3}
+			pac key ${shared_key}
+		#end
+		#if(${servername_ip4} != "" and ${authentication_port4} !="" and ${accounting_port4} != "")
+			address ipv4 ${servername_ip4} auth-port ${authentication_port4} acct-port ${accounting_port4}
+			pac key ${shared_key}
+		#end
+		#if(${servername_ip5} != "" and ${authentication_port5} !="" and ${accounting_port5} != "")
+			address ipv4 ${servername_ip5} auth-port ${authentication_port5} acct-port ${accounting_port5}
+			pac key ${shared_key}
+		#end
+                exit
+		aaa group server radius ${radious_group_name}	
+		server name ${radious_group_name}
+		#if(${servername_ip1} != "" and ${authentication_port1} !="" and ${accounting_port1} != "")
+			server ${servername_ip1} auth-port ${authentication_port1} acct-port ${accounting_port1}
+		#end
+		#if(${servername_ip2} != "" and ${authentication_port2} !="" and ${accounting_port2} != "")
+			server ${servername_ip2} auth-port ${authentication_port2} acct-port ${accounting_port2}
+		#end
+		#if(${servername_ip3} != "" and ${authentication_port3} !="" and ${accounting_port3} != "")
+			server ${servername_ip3} auth-port ${authentication_port3} acct-port ${accounting_port3}
+		#end
+		#if(${servername_ip4} != "" and ${authentication_port4} !="" and ${accounting_port4} != "")
+			server ${servername_ip4} auth-port ${authentication_port4} acct-port ${accounting_port4}
+		#end
+		#if(${servername_ip5} != "" and ${authentication_port5} !="" and ${accounting_port5} != "")
+			server ${servername_ip5} auth-port ${authentication_port5} acct-port ${accounting_port5}
+		#end
+                exit
+		#if(${MAB_AAA} eq "Enable")
+			aaa authentication dot1x default group ${radious_group_name}
+			aaa authorization network default group ${radious_group_name}
+			aaa authorization configuration default group ${radious_group_name}
+			aaa accounting dot1x default start-stop group ${radious_group_name}
+		#end
+		#if(${AAAforWebAuthentication} eq "Enable")
+			aaa authentication login default group ${radious_group_name}
+			aaa authorization auth-proxy default group ${radious_group_name}
+			aaa accounting auth-proxy default start-stop group ${radious_group_name}
+		#end
+		radius-server vsa send accounting
+		radius-server vsa send authentication
+	
+		radius-server attribute 6 on-for-login-auth
+		radius-server attribute 8 include-in-access-req
+		radius-server attribute 25 access-request include
+		radius-server attribute 31 send nas-port-detail
+		radius-server dead-criteria time 10 tries 5
+  #end
+#end
+#else
+ #if(${radious_group_name} == "")
+	aaa new-model
+	radius-server host ${servername_ip1} auth-port ${authentication_port1} acct-port ${accounting_port1} key ${shared_key}
+	#if(${MAB_AAA} eq "Enable")
+		aaa authentication dot1x default group radius
+		aaa authorization network default group radius
+		aaa authorization configuration default group radius
+		aaa accounting dot1x default start-stop group radius
+	#end
+	#if(${AAAforWebAuthentication} eq "Enable")
+		aaa authentication login default group radius
+		aaa authorization auth-proxy default group radius
+		aaa accounting auth-proxy default start-stop group radius
+	#end	
+	radius-server vsa send accounting
+	radius-server vsa send authentication
+ #else
+		aaa new-model
+		radius-server key ${shared_key}
+		#if(${servername_ip1} != "" and ${authentication_port1} !="" and ${accounting_port1} != "")
+			radius-server host ${servername_ip1} auth-port ${authentication_port1} acct-port ${accounting_port1}
+		#end
+		#if(${servername_ip2} != "" and ${authentication_port2} !="" and ${accounting_port2} != "")
+			radius-server host ${servername_ip2} auth-port ${authentication_port2} acct-port ${accounting_port2}
+		#end
+		#if(${servername_ip3} != "" and ${authentication_port3} !="" and ${accounting_port3} != "")
+			radius-server host ${servername_ip3} auth-port ${authentication_port3} acct-port ${accounting_port3}
+		#end
+		#if(${servername_ip4} != "" and ${authentication_port4} !="" and ${accounting_port4} != "")
+			radius-server host ${servername_ip4} auth-port ${authentication_port4} acct-port ${accounting_port4}
+		#end
+		#if(${servername_ip5} != "" and ${authentication_port5} !="" and ${accounting_port5} != "")
+			radius-server host ${servername_ip5} auth-port ${authentication_port5} acct-port ${accounting_port5}
+		#end
+		aaa group server radius ${radious_group_name}		
+		#if(${servername_ip1} != "" and ${authentication_port1} !="" and ${accounting_port1} != "")
+			server ${servername_ip1} auth-port ${authentication_port1} acct-port ${accounting_port1}
+		#end
+		#if(${servername_ip2} != "" and ${authentication_port2} !="" and ${accounting_port2} != "")
+			server ${servername_ip2} auth-port ${authentication_port2} acct-port ${accounting_port2}
+		#end
+		#if(${servername_ip3} != "" and ${authentication_port3} !="" and ${accounting_port3} != "")
+			server ${servername_ip3} auth-port ${authentication_port3} acct-port ${accounting_port3}
+		#end
+		#if(${servername_ip4} != "" and ${authentication_port4} !="" and ${accounting_port4} != "")
+			server ${servername_ip4} auth-port ${authentication_port4} acct-port ${accounting_port4}
+		#end
+		#if(${servername_ip5} != "" and ${authentication_port5} !="" and ${accounting_port5} != "")
+			server ${servername_ip5} auth-port ${authentication_port5} acct-port ${accounting_port5}
+		#end
+		#if(${MAB_AAA} eq "Enable")
+			aaa authentication dot1x default group ${radious_group_name}
+			aaa authorization network default group ${radious_group_name}
+			aaa authorization configuration default group ${radious_group_name}
+			aaa accounting dot1x default start-stop group ${radious_group_name}
+		#end
+		#if(${AAAforWebAuthentication} eq "Enable")
+			aaa authentication login default group ${radious_group_name}
+			aaa authorization auth-proxy default group ${radious_group_name}
+			aaa accounting auth-proxy default start-stop group ${radious_group_name}
+		#end
+		radius-server vsa send accounting
+		radius-server vsa send authentication
+  #end
+#end</clicommand>
+        </cli>
+    </config>
+</ootb-template>
