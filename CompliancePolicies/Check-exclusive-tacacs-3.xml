@@ -1,0 +1,147 @@
+<CustomPolicy xmlns="http://www.cisco.com/nccm/api/schemas/1.1" id="_Check_exclusive_tacacs_311_6_2018_13_56_2_375">
+    <Title><![CDATA[Check-exclusive-tacacs-3]]></Title>
+    
+    <CreatedOn><![CDATA[1528739767292]]></CreatedOn>
+    <ModifiedOn><![CDATA[1528740121241]]></ModifiedOn>
+    <CreatedUser><![CDATA[admin]]></CreatedUser>
+    <PolicyType><![CDATA[WIZARD]]></PolicyType>
+    <Categories>
+       <Category id="_CCM_USER_DEFINED" type="category">CCM_USER_DEFINED</Category>
+    </Categories>
+    <VersionSelectorRefs>
+      <VersionSelectorRef><![CDATA[ios]]></VersionSelectorRef>
+    </VersionSelectorRefs>
+    <References>
+      <Reference identifier="Custom">
+        <Source>Custom</Source>
+        <Sections>Custom Sections</Sections>
+        <Versions>Custom Versions</Versions>
+      </Reference>
+    </References>
+    <Rules>
+      <Rule identifier="_Check_for_exclusive_Tacacs_host_IP">
+        <Title><![CDATA[Check for exclusive Tacacs host IP]]></Title>
+        <VersionSelectorRefs>
+          <VersionSelectorRef>ios</VersionSelectorRef>
+        </VersionSelectorRefs>
+         <RuleType>RAW_CONFIG</RuleType>
+        <Conditions>
+          <Condition>
+            <Type>RAW_CONFIG</Type>
+            <DisplayString><![CDATA[Configuration must match the expression ^tacacs-server host (\d+.\d+.\d+.\d+)]]></DisplayString>
+            <MatchAction>CONTINUE</MatchAction>
+            <NonMatchAction>RAISE_RETURN</NonMatchAction>
+            <BlockParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </BlockParams>
+            <RegexpParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </RegexpParams>
+            <Severity>3</Severity>
+            <ViolationMessage><![CDATA[No tacacs servers defined]]></ViolationMessage>
+          <Violation>
+            <Message><![CDATA[No tacacs servers defined]]></Message>
+            </Violation>
+             <SubmodeRegExp><![CDATA[^tacacs-server host .*]]></SubmodeRegExp>
+            <Scope>SUBMODE_CONFIG</Scope>
+            <Operator>MATCHES_EXPRESSION</Operator>
+            <Value><![CDATA[^tacacs-server host (\d+.\d+.\d+.\d+)]]></Value>
+          </Condition>
+          <Condition>
+            <Type>RAW_CONFIG</Type>
+            <DisplayString><![CDATA[This expression must return true : <1.1> matches 172.26.104.65|172.24.164.17|172.25.194.24]]></DisplayString>
+            <MatchAction>DONT_RAISE_RETURN</MatchAction>
+            <NonMatchAction>RAISE_AND_CONTINUE</NonMatchAction>
+            <BlockParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </BlockParams>
+            <RegexpParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </RegexpParams>
+            <Severity>3</Severity>
+            <ViolationMessage><![CDATA[Configuration has non compliant tacacs-server host <1.1>]]></ViolationMessage>
+          <Violation>
+            <Message><![CDATA[Configuration has non compliant tacacs-server host <1.1>]]></Message>
+            <Fix><![CDATA[no tacacs-server host <1.1>]]></Fix>
+            </Violation>
+            <Scope>PREVIOUS_SUBMODE_CONFIG</Scope>
+            <Operator>EVALUATE</Operator>
+            <Value><![CDATA[<1.1> matches 172.26.104.65|172.24.164.17|172.25.194.24]]></Value>
+          </Condition>
+          <Condition>
+            <Type>RAW_CONFIG</Type>
+            <DisplayString><![CDATA[Configuration must contain the string tacacs-server host 172.26.104.65]]></DisplayString>
+            <MatchAction>CONTINUE</MatchAction>
+            <NonMatchAction>RAISE_AND_CONTINUE</NonMatchAction>
+            <BlockParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </BlockParams>
+            <RegexpParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </RegexpParams>
+            <Severity>3</Severity>
+            <ViolationMessage><![CDATA[Configuration does not contain tacacs-server host 172.26.104.65]]></ViolationMessage>
+          <Violation>
+            <Message><![CDATA[Configuration does not contain tacacs-server host 172.26.104.65]]></Message>
+            <Fix><![CDATA[tacacs-server host 172.26.104.65]]></Fix>
+            </Violation>
+            <Scope>ALL_CONFIG</Scope>
+            <Operator>CONTAINS</Operator>
+            <Value><![CDATA[tacacs-server host 172.26.104.65]]></Value>
+          </Condition>
+          <Condition>
+            <Type>RAW_CONFIG</Type>
+            <DisplayString><![CDATA[Configuration must contain the string tacacs-server host 172.24.164.17]]></DisplayString>
+            <MatchAction>CONTINUE</MatchAction>
+            <NonMatchAction>RAISE_AND_CONTINUE</NonMatchAction>
+            <BlockParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </BlockParams>
+            <RegexpParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </RegexpParams>
+            <Severity>3</Severity>
+            <ViolationMessage><![CDATA[Configuration does not contain tacacs-server host 10.10.10.10]]></ViolationMessage>
+          <Violation>
+            <Message><![CDATA[Configuration does not contain tacacs-server host 10.10.10.10]]></Message>
+            <Fix><![CDATA[tacacs-server host 172.24.164.17]]></Fix>
+            </Violation>
+            <Scope>ALL_CONFIG</Scope>
+            <Operator>CONTAINS</Operator>
+            <Value><![CDATA[tacacs-server host 172.24.164.17]]></Value>
+          </Condition>
+          <Condition>
+            <Type>RAW_CONFIG</Type>
+            <DisplayString><![CDATA[Configuration must contain the string tacacs-server host 172.25.194.24]]></DisplayString>
+            <MatchAction>DONT_RAISE_RETURN</MatchAction>
+            <NonMatchAction>RAISE_RETURN</NonMatchAction>
+            <BlockParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </BlockParams>
+            <RegexpParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </RegexpParams>
+            <Severity>3</Severity>
+            <ViolationMessage><![CDATA[Configuration does not contain tacacs-server host 172.25.194.24]]></ViolationMessage>
+          <Violation>
+            <Message><![CDATA[Configuration does not contain tacacs-server host 172.25.194.24]]></Message>
+            <Fix><![CDATA[tacacs-server host 172.25.194.24]]></Fix>
+            </Violation>
+            <Scope>ALL_CONFIG</Scope>
+            <Operator>CONTAINS</Operator>
+            <Value><![CDATA[tacacs-server host 172.25.194.24]]></Value>
+          </Condition>
+        </Conditions>
+      </Rule>
+    </Rules>
+</CustomPolicy>
