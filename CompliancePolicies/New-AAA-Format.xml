@@ -1,0 +1,344 @@
+<CustomPolicy xmlns="http://www.cisco.com/nccm/api/schemas/1.1" id="_New_AAA_Format_25_3_2020_17_5_19_512">
+    <Title><![CDATA[New-AAA-Format]]></Title>
+    
+    <CreatedOn><![CDATA[1585170319670]]></CreatedOn>
+    <ModifiedOn><![CDATA[1585234562433]]></ModifiedOn>
+    <CreatedUser><![CDATA[admin]]></CreatedUser>
+    <PolicyType><![CDATA[WIZARD]]></PolicyType>
+    <Categories>
+       <Category id="_CCM_USER_DEFINED" type="category">CCM_USER_DEFINED</Category>
+    </Categories>
+    <VersionSelectorRefs>
+      <VersionSelectorRef><![CDATA[iosxe]]></VersionSelectorRef>
+    </VersionSelectorRefs>
+    <References>
+      <Reference identifier="Custom">
+        <Source>Custom</Source>
+        <Sections>Custom Sections</Sections>
+        <Versions>Custom Versions</Versions>
+      </Reference>
+    </References>
+    <Rules>
+      <Rule identifier="_Check_AAA_Group">
+        <Title><![CDATA[Check AAA Group]]></Title>
+        <VersionSelectorRefs>
+          <VersionSelectorRef>iosxe</VersionSelectorRef>
+        </VersionSelectorRefs>
+         <RuleType>RAW_CONFIG</RuleType>
+        <Conditions>
+          <Condition>
+            <Type>RAW_CONFIG</Type>
+            <DisplayString><![CDATA[Configuration must match the expression aaa group server tacacs\+ (.*)]]></DisplayString>
+            <MatchAction>CONTINUE</MatchAction>
+            <NonMatchAction>RAISE_RETURN</NonMatchAction>
+            <BlockParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </BlockParams>
+            <RegexpParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </RegexpParams>
+            <Severity>2</Severity>
+            <ViolationMessage><![CDATA[No aaa group server taccas+ command found]]></ViolationMessage>
+          <Violation>
+            <Message><![CDATA[No aaa group server taccas+ command found]]></Message>
+            <Fix><![CDATA[aaa group server tacacs+ TACPLUS
+ server name ACS56]]></Fix>
+            </Violation>
+             <SubmodeRegExp><![CDATA[^aaa group server tacacs.*]]></SubmodeRegExp>
+            <Scope>SUBMODE_CONFIG</Scope>
+            <Operator>MATCHES_EXPRESSION</Operator>
+            <Value><![CDATA[aaa group server tacacs\+ (.*)]]></Value>
+          </Condition>
+          <Condition>
+            <Type>RAW_CONFIG</Type>
+            <DisplayString><![CDATA[This expression must return true : <1.1> matches TACPLUS]]></DisplayString>
+            <MatchAction>CONTINUE</MatchAction>
+            <NonMatchAction>RAISE_AND_CONTINUE</NonMatchAction>
+            <BlockParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </BlockParams>
+            <RegexpParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </RegexpParams>
+            <Severity>2</Severity>
+            <ViolationMessage><![CDATA[no aaa group server tacacs+ TACPLUS command found]]></ViolationMessage>
+          <Violation>
+            <Message><![CDATA[no aaa group server tacacs+ TACPLUS command found]]></Message>
+            <Fix><![CDATA[aaa group server tacacs+ TACPLUS
+ server name ACS56]]></Fix>
+            </Violation>
+            <Scope>PREVIOUS_SUBMODE_CONFIG</Scope>
+            <Operator>EVALUATE</Operator>
+            <Value><![CDATA[<1.1> matches TACPLUS]]></Value>
+          </Condition>
+          <Condition>
+            <Type>RAW_CONFIG</Type>
+            <DisplayString><![CDATA[Selected Configuration block must contain the string server name ACS56]]></DisplayString>
+            <MatchAction>CONTINUE</MatchAction>
+            <NonMatchAction>RAISE_RETURN</NonMatchAction>
+            <BlockParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </BlockParams>
+            <RegexpParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </RegexpParams>
+            <Severity>2</Severity>
+            <ViolationMessage><![CDATA[server name ACS56 is missing from the configuration]]></ViolationMessage>
+          <Violation>
+            <Message><![CDATA[server name ACS56 is missing from the configuration]]></Message>
+            <Fix><![CDATA[aaa group server tacacs+ TACPLUS
+ server name ACS56]]></Fix>
+            </Violation>
+            <Scope>PREVIOUS_SUBMODE_CONFIG</Scope>
+            <Operator>CONTAINS</Operator>
+            <Value><![CDATA[server name ACS56]]></Value>
+          </Condition>
+        </Conditions>
+      </Rule>
+      <Rule identifier="_Check_tacacs_server">
+        <Title><![CDATA[Check tacacs server]]></Title>
+        <VersionSelectorRefs>
+          <VersionSelectorRef>iosxe</VersionSelectorRef>
+        </VersionSelectorRefs>
+         <RuleType>RAW_CONFIG</RuleType>
+        <Conditions>
+          <Condition>
+            <Type>RAW_CONFIG</Type>
+            <DisplayString><![CDATA[Configuration must match the expression tacacs server (\w+)]]></DisplayString>
+            <MatchAction>CONTINUE</MatchAction>
+            <NonMatchAction>RAISE_RETURN</NonMatchAction>
+            <BlockParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </BlockParams>
+            <RegexpParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </RegexpParams>
+            <Severity>2</Severity>
+            <ViolationMessage><![CDATA[No tacacs server defined]]></ViolationMessage>
+          <Violation>
+            <Message><![CDATA[No tacacs server defined]]></Message>
+            <Fix><![CDATA[tacacs server ACS56
+ address ipv4 172.16.50.76
+ key cisco1234
+ single-connection]]></Fix>
+            </Violation>
+             <SubmodeRegExp><![CDATA[tacacs server \w+]]></SubmodeRegExp>
+            <Scope>SUBMODE_CONFIG</Scope>
+            <Operator>MATCHES_EXPRESSION</Operator>
+            <Value><![CDATA[tacacs server (\w+)]]></Value>
+          </Condition>
+          <Condition>
+            <Type>RAW_CONFIG</Type>
+            <DisplayString><![CDATA[This expression must return true : <1.1> matches ACS56]]></DisplayString>
+            <MatchAction>CONTINUE</MatchAction>
+            <NonMatchAction>RAISE_AND_CONTINUE</NonMatchAction>
+            <BlockParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </BlockParams>
+            <RegexpParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </RegexpParams>
+            <Severity>2</Severity>
+            <ViolationMessage><![CDATA[tacacs server defined with wrong name. <1.1> instead of ACS56]]></ViolationMessage>
+          <Violation>
+            <Message><![CDATA[tacacs server defined with wrong name. <1.1> instead of ACS56]]></Message>
+            <Fix><![CDATA[tacacs server ACS56
+ address ipv4 172.16.50.76
+ key cisco1234
+ single-connection]]></Fix>
+            </Violation>
+            <Scope>PREVIOUS_SUBMODE_CONFIG</Scope>
+            <Operator>EVALUATE</Operator>
+            <Value><![CDATA[<1.1> matches ACS56]]></Value>
+          </Condition>
+          <Condition>
+            <Type>RAW_CONFIG</Type>
+            <DisplayString><![CDATA[Selected Configuration block must contain the string address ipv4 172.16.50.76]]></DisplayString>
+            <MatchAction>CONTINUE</MatchAction>
+            <NonMatchAction>RAISE_AND_CONTINUE</NonMatchAction>
+            <BlockParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </BlockParams>
+            <RegexpParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </RegexpParams>
+            <Severity>2</Severity>
+            <ViolationMessage><![CDATA[tacacs server ACS56 pointed to incorrect IP address]]></ViolationMessage>
+          <Violation>
+            <Message><![CDATA[tacacs server ACS56 pointed to incorrect IP address]]></Message>
+            <Fix><![CDATA[tacacs server ACS56
+ address ipv4 172.16.50.76
+ key cisco1234
+ single-connection]]></Fix>
+            </Violation>
+            <Scope>PREVIOUS_SUBMODE_CONFIG</Scope>
+            <Operator>CONTAINS</Operator>
+            <Value><![CDATA[address ipv4 172.16.50.76]]></Value>
+          </Condition>
+          <Condition>
+            <Type>RAW_CONFIG</Type>
+            <DisplayString><![CDATA[Selected Configuration block must contain the string single-connection]]></DisplayString>
+            <MatchAction>CONTINUE</MatchAction>
+            <NonMatchAction>RAISE_RETURN</NonMatchAction>
+            <BlockParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </BlockParams>
+            <RegexpParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </RegexpParams>
+            <Severity>2</Severity>
+            <ViolationMessage><![CDATA[Tacacs server ACS56 does not have single-connection defined]]></ViolationMessage>
+          <Violation>
+            <Message><![CDATA[Tacacs server ACS56 does not have single-connection defined]]></Message>
+            <Fix><![CDATA[tacacs server ACS56
+ address ipv4 172.16.50.76
+ key cisco1234
+ single-connection]]></Fix>
+            </Violation>
+            <Scope>PREVIOUS_SUBMODE_CONFIG</Scope>
+            <Operator>CONTAINS</Operator>
+            <Value><![CDATA[single-connection]]></Value>
+          </Condition>
+        </Conditions>
+      </Rule>
+      <Rule identifier="_Check_AAA_is_Enabled">
+        <Title><![CDATA[Check AAA is Enabled]]></Title>
+        <VersionSelectorRefs>
+          <VersionSelectorRef>iosxe</VersionSelectorRef>
+        </VersionSelectorRefs>
+         <RuleType>RAW_CONFIG</RuleType>
+        <Conditions>
+          <Condition>
+            <Type>RAW_CONFIG</Type>
+            <DisplayString><![CDATA[Configuration must contain the string aaa authentication login default group TACPLUS local]]></DisplayString>
+            <MatchAction>CONTINUE</MatchAction>
+            <NonMatchAction>RAISE_AND_CONTINUE</NonMatchAction>
+            <BlockParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </BlockParams>
+            <RegexpParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </RegexpParams>
+            <Severity>2</Severity>
+            <ViolationMessage><![CDATA[aaa authentication login default group TACPLUS local missing from config]]></ViolationMessage>
+          <Violation>
+            <Message><![CDATA[aaa authentication login default group TACPLUS local missing from config]]></Message>
+            <Fix><![CDATA[aaa new-model
+aaa authentication login default group TACPLUS local]]></Fix>
+            </Violation>
+            <Scope>ALL_CONFIG</Scope>
+            <Operator>CONTAINS</Operator>
+            <Value><![CDATA[aaa authentication login default group TACPLUS local]]></Value>
+          </Condition>
+          <Condition>
+            <Type>RAW_CONFIG</Type>
+            <DisplayString><![CDATA[Configuration must contain the string aaa authorization exec default group TACPLUS local]]></DisplayString>
+            <MatchAction>CONTINUE</MatchAction>
+            <NonMatchAction>RAISE_AND_CONTINUE</NonMatchAction>
+            <BlockParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </BlockParams>
+            <RegexpParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </RegexpParams>
+            <Severity>2</Severity>
+            <ViolationMessage><![CDATA[aaa authorization exec default group TACPLUS local is missing from config]]></ViolationMessage>
+          <Violation>
+            <Message><![CDATA[aaa authorization exec default group TACPLUS local is missing from config]]></Message>
+            <Fix><![CDATA[aaa authorization exec default group TACPLUS local]]></Fix>
+            </Violation>
+            <Scope>ALL_CONFIG</Scope>
+            <Operator>CONTAINS</Operator>
+            <Value><![CDATA[aaa authorization exec default group TACPLUS local]]></Value>
+          </Condition>
+          <Condition>
+            <Type>RAW_CONFIG</Type>
+            <DisplayString><![CDATA[Configuration must contain the string aaa accounting commands 0 default start-stop group TACPLUS]]></DisplayString>
+            <MatchAction>CONTINUE</MatchAction>
+            <NonMatchAction>RAISE_AND_CONTINUE</NonMatchAction>
+            <BlockParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </BlockParams>
+            <RegexpParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </RegexpParams>
+            <Severity>2</Severity>
+            <ViolationMessage><![CDATA[aaa accounting commands 0 default start-stop group TACPLUS is missing from config]]></ViolationMessage>
+          <Violation>
+            <Message><![CDATA[aaa accounting commands 0 default start-stop group TACPLUS is missing from config]]></Message>
+            <Fix><![CDATA[aaa accounting commands 0 default start-stop group TACPLUS]]></Fix>
+            </Violation>
+            <Scope>ALL_CONFIG</Scope>
+            <Operator>CONTAINS</Operator>
+            <Value><![CDATA[aaa accounting commands 0 default start-stop group TACPLUS]]></Value>
+          </Condition>
+          <Condition>
+            <Type>RAW_CONFIG</Type>
+            <DisplayString><![CDATA[Configuration must contain the string aaa accounting commands 1 default start-stop group TACPLUS]]></DisplayString>
+            <MatchAction>CONTINUE</MatchAction>
+            <NonMatchAction>RAISE_AND_CONTINUE</NonMatchAction>
+            <BlockParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </BlockParams>
+            <RegexpParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </RegexpParams>
+            <Severity>2</Severity>
+            <ViolationMessage><![CDATA[aaa accounting commands 1 default start-stop group TACPLUS is missing from config]]></ViolationMessage>
+          <Violation>
+            <Message><![CDATA[aaa accounting commands 1 default start-stop group TACPLUS is missing from config]]></Message>
+            <Fix><![CDATA[aaa accounting commands 1 default start-stop group TACPLUS]]></Fix>
+            </Violation>
+            <Scope>ALL_CONFIG</Scope>
+            <Operator>CONTAINS</Operator>
+            <Value><![CDATA[aaa accounting commands 1 default start-stop group TACPLUS]]></Value>
+          </Condition>
+          <Condition>
+            <Type>RAW_CONFIG</Type>
+            <DisplayString><![CDATA[Configuration must contain the string aaa accounting commands 15 default start-stop group TACPLUS]]></DisplayString>
+            <MatchAction>CONTINUE</MatchAction>
+            <NonMatchAction>RAISE_RETURN</NonMatchAction>
+            <BlockParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </BlockParams>
+            <RegexpParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </RegexpParams>
+            <Severity>2</Severity>
+            <ViolationMessage><![CDATA[aaa accounting commands 15 default start-stop group TACPLUS is missing from config]]></ViolationMessage>
+          <Violation>
+            <Message><![CDATA[aaa accounting commands 15 default start-stop group TACPLUS is missing from config]]></Message>
+            <Fix><![CDATA[aaa accounting commands 15 default start-stop group TACPLUS]]></Fix>
+            </Violation>
+            <Scope>ALL_CONFIG</Scope>
+            <Operator>CONTAINS</Operator>
+            <Value><![CDATA[aaa accounting commands 15 default start-stop group TACPLUS]]></Value>
+          </Condition>
+        </Conditions>
+      </Rule>
+    </Rules>
+</CustomPolicy>

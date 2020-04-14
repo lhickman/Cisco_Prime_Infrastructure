@@ -1,0 +1,106 @@
+<CustomPolicy xmlns="http://www.cisco.com/nccm/api/schemas/1.1" id="_SNMPv3_Group_1_4_2020_14_22_30_200">
+    <Title><![CDATA[SNMPv3 Group]]></Title>
+    
+    <CreatedOn><![CDATA[1585765350434]]></CreatedOn>
+    <ModifiedOn><![CDATA[1585766437833]]></ModifiedOn>
+    <CreatedUser><![CDATA[admin]]></CreatedUser>
+    <PolicyType><![CDATA[WIZARD]]></PolicyType>
+    <Categories>
+       <Category id="_CCM_USER_DEFINED" type="category">CCM_USER_DEFINED</Category>
+    </Categories>
+    <VersionSelectorRefs>
+      <VersionSelectorRef><![CDATA[ios]]></VersionSelectorRef>
+      <VersionSelectorRef><![CDATA[iosxe]]></VersionSelectorRef>
+    </VersionSelectorRefs>
+    <References>
+      <Reference identifier="Custom">
+        <Source>Custom</Source>
+        <Sections>Custom Sections</Sections>
+        <Versions>Custom Versions</Versions>
+      </Reference>
+    </References>
+    <Rules>
+      <Rule identifier="_SNMPv3_DES">
+        <Title><![CDATA[SNMPv3-DES]]></Title>
+        <Description><![CDATA[This rule should only be used to check 2960 switches]]></Description>
+        <VersionSelectorRefs>
+          <VersionSelectorRef>ios</VersionSelectorRef>
+          <VersionSelectorRef>iosxe</VersionSelectorRef>
+        </VersionSelectorRefs>
+         <RuleType>RAW_CONFIG</RuleType>
+        <Conditions>
+          <Condition>
+            <Type>RAW_CONFIG</Type>
+            <DisplayString><![CDATA[Output of show snmp user snmpv3user must contain the string User name: snmpv3user]]></DisplayString>
+            <MatchAction>CONTINUE</MatchAction>
+            <NonMatchAction>RAISE_RETURN</NonMatchAction>
+            <BlockParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </BlockParams>
+            <RegexpParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </RegexpParams>
+            <Severity>3</Severity>
+            <ViolationMessage><![CDATA[No snmp-server user snmpv3user defined]]></ViolationMessage>
+          <Violation>
+            <Message><![CDATA[No snmp-server user snmpv3user defined]]></Message>
+            </Violation>
+             <SubmodeRegExp><![CDATA[User name]]></SubmodeRegExp>
+             <SubmodeEndRegExp><![CDATA[Group-name]]></SubmodeEndRegExp>
+             <DatasetName><![CDATA[show snmp user snmpv3user]]></DatasetName>
+            <Scope>SUBMODE_DATASET</Scope>
+            <Operator>CONTAINS</Operator>
+            <Value><![CDATA[User name: snmpv3user]]></Value>
+          </Condition>
+          <Condition>
+            <Type>RAW_CONFIG</Type>
+            <DisplayString><![CDATA[Selected Configuration block must contain the string Engine ID: 800000090300000000000000]]></DisplayString>
+            <MatchAction>RAISE_AND_CONTINUE</MatchAction>
+            <NonMatchAction>CONTINUE</NonMatchAction>
+            <BlockParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </BlockParams>
+            <RegexpParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </RegexpParams>
+            <Severity>3</Severity>
+            <ViolationMessage><![CDATA[SNMP Engine ID is not unique]]></ViolationMessage>
+          <Violation>
+            <Message><![CDATA[SNMP Engine ID is not unique]]></Message>
+            <Fix><![CDATA[snmp-server engineID local]]></Fix>
+            </Violation>
+            <Scope>PREVIOUS_SUBMODE_CONFIG</Scope>
+            <Operator>CONTAINS</Operator>
+            <Value><![CDATA[Engine ID: 800000090300000000000000]]></Value>
+          </Condition>
+          <Condition>
+            <Type>RAW_CONFIG</Type>
+            <DisplayString><![CDATA[Selected Configuration block must match the expression Privacy Protocol: DES]]></DisplayString>
+            <MatchAction>CONTINUE</MatchAction>
+            <NonMatchAction>RAISE_RETURN</NonMatchAction>
+            <BlockParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </BlockParams>
+            <RegexpParams>
+              <PassCriterion>ALL</PassCriterion>
+              <RaiseViolationForAllInstances>true</RaiseViolationForAllInstances>
+            </RegexpParams>
+            <Severity>3</Severity>
+            <ViolationMessage><![CDATA[SNMP privacy protocol is not set to 3DES]]></ViolationMessage>
+          <Violation>
+            <Message><![CDATA[SNMP privacy protocol is not set to 3DES]]></Message>
+            <Fix><![CDATA[snmp-server user snmpv3user snmpv3group v3 auth md5 cisco123 priv 3des cisco123]]></Fix>
+            </Violation>
+            <Scope>PREVIOUS_SUBMODE_CONFIG</Scope>
+            <Operator>MATCHES_EXPRESSION</Operator>
+            <Value><![CDATA[Privacy Protocol: DES]]></Value>
+          </Condition>
+        </Conditions>
+      </Rule>
+    </Rules>
+</CustomPolicy>
